@@ -7,7 +7,7 @@ SCRAPE_TIMEOUT = 30_000
 SCRAPE_SLEEP = 4
 
 def run_browser(url: str) -> tuple[str, str]:
-    ws_endpoint = os.getenv("BROWSER_WS_ENDPOINT", "ws://127.0.0.1:3001")
+    ws_endpoint = os.getenv("BROWSER_WS_ENDPOINT")
 
     with sync_playwright() as p:
         browser = p.chromium.connect_over_cdp(ws_endpoint)
@@ -27,7 +27,6 @@ import requests
 from typing import List
 from langchain.tools import BaseTool
 
-SEARX_URL = os.getenv("SEARX_URL", "http://127.0.0.1:8888")
 MAX_SEARCH_RESULTS = 5
 
 
@@ -44,7 +43,7 @@ class LocalSearxSearchAndScrapeToolBrowseless(BaseTool):
         pages: List[str] = []
         try:
             resp = requests.get(
-                SEARX_URL, params={"q": query, "format": "json"}, timeout=20
+                os.getenv("SEARX_URL"), params={"q": query, "format": "json"}, timeout=20
             )
             hits = resp.json().get("results", [])[:MAX_SEARCH_RESULTS]
         except Exception as e:
@@ -67,19 +66,29 @@ class LocalSearxSearchAndScrapeToolBrowseless(BaseTool):
 
 
 from langchain_qdrant import Qdrant
-from langchain_openai import OpenAIEmbeddings
+from langchain_openai import AzureOpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
+def get_azure_embeddings():
+    """Initializes and returns Azure OpenAI embeddings."""
+    return AzureOpenAIEmbeddings(
+        azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
+        openai_api_version=os.environ["OPENAI_API_VERSION"],
+        deployment=os.environ["OPENAI_API_DEPLOYMENT_NAME"],
+        openai_api_key=os.environ["OPENAI_API_KEY"],
+        openai_api_type="azure",
+    )
 
 def get_qdrant_retriever(collection_name: str):
     """
     Returns a Qdrant retriever for the given collection name.
     """
+    embeddings = get_azure_embeddings()
     qdrant = Qdrant(
         client=None,
         collection_name=collection_name,
-        embeddings=OpenAIEmbeddings(),
-        url=os.getenv("QDRANT_URL", "http://127.0.0.1:6333"),
+        embeddings=embeddings,
+        url=os.getenv("QDRANT_URL"),
     )
     return qdrant.as_retriever()
 
@@ -88,6 +97,7 @@ def store_documents(collection_name: str, documents: List[str]):
     """
     Stores the given documents in the Qdrant collection.
     """
+    embeddings = get_azure_embeddings()
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,
         chunk_overlap=200,
@@ -95,7 +105,7 @@ def store_documents(collection_name: str, documents: List[str]):
     docs = text_splitter.create_documents(documents)
     Qdrant.from_documents(
         docs,
-        OpenAIEmbeddings(),
+        embeddings,
         url=os.getenv("QDRANT_URL", "http://127.0.0.1:6333"),
         collection_name=collection_name,
     )
