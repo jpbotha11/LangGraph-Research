@@ -1,0 +1,13 @@
+langchain
+langgraph
+langchain_openai
+qdrant-client
+langchain-qdrant
+langchain-text-splitters
+playwright
+requests
+langsmith
+langfuse
+numpy
+dotenv
+streamlit
