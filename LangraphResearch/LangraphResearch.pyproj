@@ -29,6 +29,7 @@
   <ItemGroup>
     <Compile Include="app.py" />
     <Compile Include="graph.py" />
+    <Compile Include="lmstudioembedder.py" />
     <Compile Include="main.py" />
     <Compile Include="qdrant.py" />
     <Compile Include="utils.py" />

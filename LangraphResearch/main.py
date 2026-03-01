@@ -63,7 +63,7 @@ def main():
     )
 
     agent = ResearchAgent(model)
-    query = ""  # Example query
+    query = "hi"  # Example query
 
     print(f"Starting research for: '{query}'...")
     result = agent.run(query, {"callbacks": callbacks})
