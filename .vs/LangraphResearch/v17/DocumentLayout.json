@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{78C5426B-9F5F-4D5B-90DE-D0C9CD62D0BB}|LangraphResearch.pyproj|C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{78C5426B-9F5F-4D5B-90DE-D0C9CD62D0BB}|LangraphResearch.pyproj|solutionrelative:.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78C5426B-9F5F-4D5B-90DE-D0C9CD62D0BB}|LangraphResearch.pyproj|C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\lmstudioembedder.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{78C5426B-9F5F-4D5B-90DE-D0C9CD62D0BB}|LangraphResearch.pyproj|solutionrelative:lmstudioembedder.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78C5426B-9F5F-4D5B-90DE-D0C9CD62D0BB}|LangraphResearch.pyproj|C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\graph.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{78C5426B-9F5F-4D5B-90DE-D0C9CD62D0BB}|LangraphResearch.pyproj|solutionrelative:graph.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78C5426B-9F5F-4D5B-90DE-D0C9CD62D0BB}|LangraphResearch.pyproj|C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\app.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{78C5426B-9F5F-4D5B-90DE-D0C9CD62D0BB}|LangraphResearch.pyproj|solutionrelative:app.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78C5426B-9F5F-4D5B-90DE-D0C9CD62D0BB}|LangraphResearch.pyproj|C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\main.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{78C5426B-9F5F-4D5B-90DE-D0C9CD62D0BB}|LangraphResearch.pyproj|solutionrelative:main.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".env",
+              "DocumentMoniker": "C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\.env",
+              "RelativeDocumentMoniker": ".env",
+              "ToolTip": "C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\.env",
+              "RelativeToolTip": ".env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-13T18:33:23.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "lmstudioembedder.py",
+              "DocumentMoniker": "C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\LMStudioEmbedder.py",
+              "RelativeDocumentMoniker": "LMStudioEmbedder.py",
+              "ToolTip": "C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\LMStudioEmbedder.py",
+              "RelativeToolTip": "LMStudioEmbedder.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-13T18:33:00.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "app.py",
+              "DocumentMoniker": "C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\app.py",
+              "RelativeDocumentMoniker": "app.py",
+              "ToolTip": "C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\app.py",
+              "RelativeToolTip": "app.py",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-13T18:32:36.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "graph.py",
+              "DocumentMoniker": "C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\graph.py",
+              "RelativeDocumentMoniker": "graph.py",
+              "ToolTip": "C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\graph.py",
+              "RelativeToolTip": "graph.py",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-13T18:20:21.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "main.py",
+              "DocumentMoniker": "C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\main.py",
+              "RelativeDocumentMoniker": "main.py",
+              "ToolTip": "C:\\Users\\Jaco\\Documents\\Jaco\\Git\\LangGraph-Research\\LangraphResearch\\main.py",
+              "RelativeToolTip": "main.py",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-13T18:20:06.257Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

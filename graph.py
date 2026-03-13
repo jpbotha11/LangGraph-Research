@@ -66,8 +66,11 @@ class ResearchAgent:
 
     def search_node(self, state: AgentState):
         query = state["messages"][-1].content
-        documents = self.search_tool._run(query)
-        return {"documents": documents, "collection_name": str(uuid.uuid4())}
+        collection_name = str(uuid.uuid4())
+        documents = self.search_tool._run(query,collection_name)
+        
+
+        return {"documents": documents, "collection_name": collection_name}
 
     def store_documents_node(self, state: AgentState):
         store_documents(state["collection_name"], state["documents"])
@@ -78,10 +81,11 @@ class ResearchAgent:
 
     def generate_questions_node(self, state: AgentState):
         retriever = get_qdrant_retriever(state["collection_name"])
-        documents = retriever.get_relevant_documents(state["messages"][-1].content)
-        prompt = f"Based on the following documents, please generate a list of 3 relevant questions that can be answered from the documents:\\n\\n{documents}"
+        q = state["messages"][-1].content
+        documents = retriever.invoke(q)
+        prompt = f"Based on the following documents, please generate a comma separated list of 3 relevant questions that can be answered from the documents:\\n\\n{documents}. Only return a list of questions."
         response = self.model.invoke([HumanMessage(content=prompt)])
-        questions = response.content.strip().split("\n")
+        questions = response.content.strip().split(",")
         return {"questions": questions}
 
     def generate_answers_node(self, state: AgentState):
@@ -90,7 +94,7 @@ class ResearchAgent:
         for question in state["questions"]:
             if not question:
                 continue
-            documents = retriever.get_relevant_documents(question)
+            documents = retriever.invoke(question)
             prompt = f"Based on the following documents, please answer the question: {question}\\n\\n{documents}"
             response = self.model.invoke([HumanMessage(content=prompt)])
             answers.append(response.content)

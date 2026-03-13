@@ -1,6 +1,7 @@
 import os
 import sys
 from dotenv import load_dotenv
+from qdrant_client import QdrantClient
 from graph import ResearchAgent
 from langchain_openai import AzureChatOpenAI
 
@@ -62,7 +63,7 @@ def main():
     )
 
     agent = ResearchAgent(model)
-    query = "What is the future of AI?"  # Example query
+    query = "hi"  # Example query
 
     print(f"Starting research for: '{query}'...")
     result = agent.run(query, {"callbacks": callbacks})
@@ -71,4 +72,10 @@ def main():
     print(result.get("report", "No report generated."))
 
 if __name__ == "__main__":
+
+   
+
+
+
+
     main()
